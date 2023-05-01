@@ -101,16 +101,18 @@ function CustomComponents(props: CustomComponentsProps): JSX.Element {
         </span>
         {isActiveMenue ? <ArrowUp2 onClick={toggleActiveMenue} role="button" /> : <ArrowDown2 onClick={toggleActiveMenue} role="button" />}
       </div>
-      <div className="menu_body">
-        <div className="tool_list">
-          {ToolsComponents.map((item, index) => (
-            <div ref={(ref: any) => create(ref, item?.createdElemnt)} key={index} draggable className="tool_list--item ">
-              <RulerPen />
-              <small className="tool_list--item__name">{item.name}</small>
-            </div>
-          ))}
+      {isActiveMenue && (
+        <div className="menu_body">
+          <div className="tool_list">
+            {ToolsComponents.map((item, index) => (
+              <div ref={(ref: any) => create(ref, item?.createdElemnt)} key={index} draggable className="tool_list--item ">
+                <RulerPen />
+                <small className="tool_list--item__name">{item.name}</small>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </StylesContainer>
   );
 }

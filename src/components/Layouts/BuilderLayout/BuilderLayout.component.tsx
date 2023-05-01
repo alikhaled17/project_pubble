@@ -7,6 +7,7 @@ import MainControlSideNavigation from "@/components/Shared/MainControlSideNaviga
 import { Editor } from "@craftjs/core";
 import { Outlet } from "react-router";
 import Containerx from "./BuilderLayout.style";
+import Design from "../../../modules/Design/Design.component";
 
 function BuilderLayout(): JSX.Element {
   return (
@@ -22,7 +23,7 @@ function BuilderLayout(): JSX.Element {
                 <NavigationBar />
               </div>
               <div className="col-12 outlet">
-                <Outlet />
+                <Design />
               </div>
             </div>
           </div>

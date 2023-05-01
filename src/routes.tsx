@@ -10,21 +10,7 @@ const Routes = () => {
   const routes = useRoutes([
     {
       path: "",
-      element: <Navigate to="/design" />,
-    },
-    {
-      path: "/design",
       element: <Builder />,
-      children: [
-        {
-          index: true,
-          element: <Navigate to="page" />,
-        },
-        {
-          path: "page",
-          element: <Design />,
-        },
-      ],
     },
   ]);
 

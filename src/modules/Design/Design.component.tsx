@@ -60,7 +60,7 @@ function Viewport(): JSX.Element {
                     canvas
                     is={Container}
                     width="100%"
-                    height="auto"
+                    height="100vh"
                     background={{ r: 255, g: 255, b: 255, a: 1 }}
                     padding={["0", "0", "0", "0"]}
                     custom={{ displayName: "App" }}
