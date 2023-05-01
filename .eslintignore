@@ -1,0 +1,6 @@
+# dist
+# node_modules
+# global.d.ts
+
+runtime-env-templete.js
+runtime-env.js

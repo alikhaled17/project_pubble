@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "WebWorker", "ES2021.String"],
+    // "types": ["@types/jest"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "strict": true,
+    "typeRoots": ["./src/core/types"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src",
+    "src/types",
+    ".eslintrc.cjs",
+    "vite.config.ts",
+    "setupTests.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

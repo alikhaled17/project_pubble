@@ -1,0 +1,269 @@
+// Importing partails
+@import "@/assets/styles/fonts";
+@import "@/assets/styles/mixins";
+@import "@/assets/styles/variables";
+
+/* import bootstrap to set changes */
+@import "node_modules/bootstrap/scss/bootstrap";
+.component-selected {
+  position: relative;
+}
+.component-selected::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: dashed;
+  pointer-events: none;
+}
+
+.toast-message {
+  top: 0;
+  width: 80%;
+
+  padding: 0;
+  .Toastify__toast {
+    // background: darkblue !important;
+    color: #d32f2f;
+    width: 100%;
+    font-weight: 500;
+    box-shadow: none;
+    font-size: 16px;
+    button {
+      fill: #d32f2f;
+      color: #d32f2f;
+      border: 2px solid #d32f2f;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      width: 20px;
+      height: 20px;
+      padding: 2px;
+      svg {
+        margin-left: 1px;
+      }
+    }
+    &.Toastify__toast--error {
+      background: #fbeaea;
+      color: #d32f2f;
+      // border: 2px solid #fbeaea;
+      button {
+        fill: #d32f2f;
+        color: #d32f2f;
+        border: 2px solid #d32f2f;
+      }
+    }
+    &.Toastify__toast--success {
+      background: #e1f3ea;
+      color: #2fb93c;
+      // border: 1px solid #e1f3ea;
+      button {
+        fill: #2fb93c;
+        color: #2fb93c;
+        border: 2px solid #2fb93c;
+      }
+    }
+    &.Toastify__toast--info {
+      background: #dbecff;
+      color: #3a70e2;
+      // border: 1px solid #dbecff;
+      button {
+        fill: #3a70e2;
+        color: #3a70e2;
+        border: 2px solid #3a70e2;
+      }
+    }
+    &.Toastify__toast--warning {
+      background: #fff4d5;
+      color: #fe9b0e;
+      // border: 1px solid #fff4d5;
+      button {
+        fill: #fe9b0e;
+        color: #fe9b0e;
+        border: 2px solid #fe9b0e;
+      }
+    }
+    &-body {
+      width: 100%;
+    }
+  }
+}
+
+// Global styles
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa;
+}
+
+/* SCROLL BAR*/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3a70e2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-primary;
+}
+/* SCROLL BAR */
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-weight: normal;
+  color: $color-text;
+  &::-webkit-scrollbar-thumb,
+  & *::-webkit-scrollbar-thumb {
+    // background-color: $color-blue;
+  }
+}
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+:root {
+  font-size: 1rem;
+}
+
+@media #{$media-laptop-large} {
+  :root {
+    font-size: 0.9rem;
+  }
+}
+
+@media #{$media-tablet} {
+  :root {
+    font-size: 0.8rem;
+  }
+}
+
+:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+p,
+tr,
+td,
+th {
+}
+
+button:disabled,
+button[disabled] {
+  cursor: not-allowed;
+}
+
+::-webkit-input-placeholder {
+}
+
+:-ms-input-placeholder {
+}
+
+::placeholder {
+}
+
+a,
+button {
+  text-decoration: none;
+  @include transition(all, 100ms);
+}
+
+:root {
+  font-size: 1.2rem;
+}
+
+@media #{$media-laptop-large} {
+  :root {
+    font-size: 1rem;
+  }
+}
+
+@media #{$media-tablet} {
+  :root {
+    font-size: 0.9rem;
+  }
+}
+
+.dir-ltr {
+  direction: ltr !important;
+}
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.font-bold {
+  font-weight: bold !important;
+}
+.react-flow-map {
+  background-color: #fff;
+  .react-flow__handle {
+    background: #c4c4c4;
+  }
+  .react-flow__edge-path,
+  .react-flow__connection-path {
+    stroke-width: 2px;
+    fill: none;
+    background: #c4c4c4;
+  }
+
+  .react-flow__edge,
+  .react-flow__handle {
+    pointer-events: none;
+  }
+}
+
+.modal {
+  z-index: 10000 !important;
+}
+
+.Toastify {
+  z-index: 90000;
+}
+
+#root,
+#root > main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
