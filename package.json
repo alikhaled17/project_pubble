@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "vite serve",
     "build": "npm run clean && tsc && vite build",
     "build:testing": "npm run clean && tsc && vite build --mode testing",

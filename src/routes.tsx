@@ -1,8 +1,7 @@
 import { Navigate, Outlet, useRoutes } from "react-router-dom";
 import { lazy } from "react";
+import Builder from "@/modules/Builder/Builder.component";
 import Design from "./modules/Design/Design.component";
-
-const Builder = lazy(() => import("@/modules/Builder/Builder.component"));
 
 const Routes = () => {
   // const { user } = useSelector((state: AppState) => state.Auth);

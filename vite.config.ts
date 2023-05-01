@@ -8,13 +8,14 @@ import * as path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  // base: "./",
   server: {
     port: 3000,
   },
   preview: {
     port: 5000,
   },
+  base: "/project_pubble",
   plugins: [
     react({
       jsxRuntime: "automatic",
