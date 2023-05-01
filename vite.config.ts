@@ -15,7 +15,7 @@ export default defineConfig({
   preview: {
     port: 5000,
   },
-  base: "/project_pubble",
+  base: "./project_pubble",
   plugins: [
     react({
       jsxRuntime: "automatic",
